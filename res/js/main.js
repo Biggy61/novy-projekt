@@ -130,3 +130,35 @@ function getSentence(a, b) {
 const createSentence = (a, b) => `Tvoje jmeno je ${a} a je ti ${b} let`
 console.log(createSentence(person, age))
 */
+
+
+
+const startButton = document.getElementById("start");
+const point = document.getElementById("point");
+let gameInterval;
+
+
+startButton.onclick = () => {
+    hideElement(startButton);
+    startGameInterval(point);
+}
+
+const movePoint = (element, x, y) => {
+    element.style.top = `${y}px`;
+    element.style.left = `${x}px`;
+}
+
+const hideElement = (element) => {
+     element.style.display = "none"
+    }
+
+    const startGameInterval = (element) => {
+        clearInterval(gameInterval);
+        gameInterval = setInterval(() => (
+            movePoint(element, getRandomNumber(50, 600), getRandomNumber(50, 600))
+        ), 550);
+
+    }
+
+
+const getRandomNumber = (minimum, maximum) => Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;

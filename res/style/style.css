@@ -7,22 +7,23 @@
 
 #start{
     width: 400px;
-    height: 200px;
+    height: 100px;
     background-color: rgb(241, 164, 177);
-    color: blueviolet;
+    color: white;
     cursor: pointer;
     border-radius: 40px;
     border: 4px solid rgb(181, 9, 181);
-    font-size: 50px;
+    font-size: 70px;
     margin: auto;
     box-shadow: 0 0 20px ;
-    margin-left: 35%;
+    padding-top: 2.5%;
     transition: 0.4s ease;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
 }
-#start:hover{
-    
-}
-#tlacitko{
+
+#point{
     width: 100px;
     height: 100px;
     background-color: pink;
@@ -30,9 +31,11 @@
     border: 5px solid purple;
     cursor: pointer;
     position: absolute;
-    top: 500px;
-    left: 400px;
-
+    top: 300px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transition: 0.4s ease;
 
     
 }
